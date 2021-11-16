@@ -1,23 +1,31 @@
 package day02.cars;
 
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.Assert.*;
 
 
-class CarShopTest {
+public class CarShopTest {
 
     CarShop carShop = new CarShop("BestCars", 100);
+
+    @BeforeEach
+        public  void init(){
+        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 80));
+        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
+        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));}
 
 
     @Test
 
         public void createCarShopTest () {
 
+        CarShop carShop = new CarShop("BestCars", 100);
 
 
             assertEquals("BestCars", carShop.getTraderName());
-            assertEquals(100, carShop.getTraderName());
+            assertEquals(100, carShop.getMaxPrice());
             assertEquals(0, carShop.getCarsForSell().size());
 
 
@@ -31,7 +39,7 @@ class CarShopTest {
 
             assertTrue(result);
             assertEquals(1, carShop.getCarsForSell().size());
-            assertEquals("Toyota", carShop.getCarsForSell().get(0), getClass());
+            assertEquals("Toyota", carShop.getCarsForSell().get(0).getType());
 
 
 
@@ -50,9 +58,7 @@ class CarShopTest {
 
     @Test
     public void sumPriceOfCarsTest(){
-        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 80));
-        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
-        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
-}
+        assertEquals(0,carShop.sumCarPrice());
+    }
 
 }

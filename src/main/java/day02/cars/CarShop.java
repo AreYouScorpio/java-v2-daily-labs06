@@ -70,5 +70,11 @@ public class CarShop {
         return result;
     }
 
-
+    @Override
+    public String toString() {
+        return "CarShop{" +
+                "traderName='" + traderName + '\'' +
+                ", maxPrice=" + maxPrice +
+                '}';
+    }
 }
