@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CarShop {
     private String traderName;
     private int maxPrice;
-    public static List<cars.Car> CarsForSell = new ArrayList<>();
+    public static List<day02.cars.Car> CarsForSell = new ArrayList<>();
 
     public CarShop(String traderName, int maxPrice) {
         this.traderName = traderName;
@@ -25,11 +25,11 @@ public class CarShop {
         return maxPrice;
     }
 
-    public List<cars.Car> getCarsForSell() {
+    public List<day02.cars.Car> getCarsForSell() {
         return CarsForSell;
     }
 
-    boolean addCar(cars.Car car){
+    boolean addCar(day02.cars.Car car){
         if (car.price<maxPrice) {
             CarsForSell.add(car);
             return true;
@@ -59,8 +59,8 @@ public class CarShop {
 
     }
 
-    public List<cars.Car> carsWithBrand(String brand){
-        List<cars.Car> result=new ArrayList<>();
+    public List<day02.cars.Car> carsWithBrand(String brand){
+        List<day02.cars.Car> result=new ArrayList<>();
         for (int i=0; i<getCarsForSell().size();i++) {
             if (getCarsForSell().get(i).getType().equals(brand))
                 result.add(getCarsForSell().get(i));
