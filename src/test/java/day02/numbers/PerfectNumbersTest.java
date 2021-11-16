@@ -9,14 +9,14 @@ public class PerfectNumbersTest {
     @Test
     public void testIsPerfectNumber() {
 
-        //Given
+        // Given
         PerfectNumbers perfectNumbers = new PerfectNumbers ();
 
         // When
-        int number=5;
+        int number=6;
         boolean expected = false;
 
-        //Then
+        // Then
         assertEquals(expected, perfectNumbers.isPerfectNumber(number));
 
 
