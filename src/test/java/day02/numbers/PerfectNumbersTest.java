@@ -13,11 +13,18 @@ public class PerfectNumbersTest {
         PerfectNumbers perfectNumbers = new PerfectNumbers ();
 
         // When
-        int number=6;
+        int number=5;
         boolean expected = false;
 
         // Then
         assertEquals(expected, perfectNumbers.isPerfectNumber(number));
+
+
+        assertTrue(perfectNumbers.isPerfectNumber(8128));
+        assertTrue(perfectNumbers.isPerfectNumber(6));
+
+        assertFalse(perfectNumbers.isPerfectNumber(88));
+        assertFalse(perfectNumbers.isPerfectNumber(27));
 
 
     }
