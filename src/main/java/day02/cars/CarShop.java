@@ -17,6 +17,8 @@ public class CarShop {
     }
 
 
+
+
     public String getTraderName() {
         return traderName;
     }
@@ -29,7 +31,7 @@ public class CarShop {
         return CarsForSell;
     }
 
-    boolean addCar(day02.cars.Car car){
+    public boolean addCar(day02.cars.Car car){
         if (car.price<maxPrice) {
             CarsForSell.add(car);
             return true;
@@ -67,5 +69,6 @@ public class CarShop {
         }
         return result;
     }
+
 
 }

@@ -4,24 +4,24 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-class CarTest {
+public class CarTest {
 
     Car car = new Car("Toyota", 1.2, Color.BLUE, 120);
 
 
     @Test
-    void createCarTest () {
+    public void createCarTest () {
         Car car = new Car("Toyota", 1.2, Color.BLUE, 120);
 
         assertEquals("Toyota", car.getType());
-        assertEquals(1.2, car.getCcm());
-        assertEquals(Color.BLUE, car.getClass());
+        assertEquals(1.2, car.getCcm(), 0.005);
+        assertEquals(Color.BLUE, car.getColor());
         assertEquals(120, car.getPrice());
     }
 
 
     @Test
-    void decreasePriceTest() {
+    public void decreasePriceTest() {
 
 
         car.decreasePrice(10);
@@ -31,10 +31,13 @@ class CarTest {
     }
 
     @Test
-    void decreasePriceWithWrongPercentTest(){
+    public void decreasePriceWithWrongPercentTest(){
 
-    car.decreasePrice(-90);
+    car.decreasePrice(0);
     assertEquals(120, car.getPrice());
+
+    car.decreasePrice(100);
+    assertEquals(0, car.getPrice());
 
 
 }

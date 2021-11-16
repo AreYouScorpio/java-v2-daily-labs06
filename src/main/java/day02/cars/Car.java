@@ -3,14 +3,16 @@ package day02.cars;
 public class Car {
     private String type;
     private double ccm;
-    private Enum
+    private Enum Color;
     int price;
 
-    public Car(String type, double ccm, Color color,  int price) {
+
+
+    public Car(String type, double ccm, Enum color, int price) {
         this.type = type;
         this.ccm = ccm;
+        Color = color;
         this.price = price;
-
     }
 
     public String getType() {
@@ -23,6 +25,10 @@ public class Car {
 
     public int getPrice() {
         return price;
+    }
+
+    public Enum getColor() {
+        return Color;
     }
 
     public int decreasePrice(int percent) {

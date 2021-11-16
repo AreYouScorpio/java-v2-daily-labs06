@@ -10,9 +10,10 @@ class CarShopTest {
     CarShop carShop = new CarShop("BestCars", 100);
 
 
-    @Test {
+    @Test
 
-        void createCarShopTest () {
+        public void createCarShopTest () {
+
 
 
             assertEquals("BestCars", carShop.getTraderName());
@@ -21,24 +22,24 @@ class CarShopTest {
 
 
         }
-    }
 
-    @Test {
 
-        void addCarWithValidPriceTest () {
-            boolean result = carShop.addCar("Toyota", 1.2, Color.BLUE, 99);
+    @Test
+
+        public void addCarWithValidPriceTest() {
+            boolean result = carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 99));
 
             assertTrue(result);
             assertEquals(1, carShop.getCarsForSell().size());
             assertEquals("Toyota", carShop.getCarsForSell().get(0), getClass());
 
 
-        }
+
 
     }
 
     @Test
-    void addCarWithInvalidPriceTest() {
+    public void addCarWithInvalidPriceTest() {
         boolean result = carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
 
         assertFalse(result);
@@ -48,7 +49,7 @@ class CarShopTest {
     }
 
     @Test
-    void sumPriceOfCarsTest(){
+    public void sumPriceOfCarsTest(){
         carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 80));
         carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
         carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
