@@ -46,6 +46,12 @@ class CarShopTest {
 
 
     }
+
+    @Test
+    void sumPriceOfCarsTest(){
+        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 80));
+        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
+        carShop.addCar(new Car("Toyota", 1.2, Color.BLUE, 101));
 }
 
 }
