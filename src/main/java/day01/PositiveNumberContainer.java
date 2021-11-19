@@ -5,16 +5,20 @@ import java.util.List;
 
 public class PositiveNumberContainer {
 
-    public static List<Double> numbers = new ArrayList<>();
+    private List<Double> numbers = new ArrayList<>();
 
     public void addNumber(double newnumber){
         numbers.add(newnumber);
     }
 
-    public static List<Double> getNumbers() {
+    public List<Double> getNumbers() {
         return numbers;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "PositiveNumberContainer{" +
+                "numbers=" + numbers +
+                '}';
+    }
 }

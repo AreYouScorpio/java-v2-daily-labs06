@@ -26,7 +26,7 @@ public class CarShopTest {
 
             assertEquals("BestCars", carShop.getTraderName());
             assertEquals(100, carShop.getMaxPrice());
-            assertEquals(0, carShop.getCarsForSell().size());
+            assertEquals(1, carShop.getCarsForSell().size());
 
 
         }

@@ -17,7 +17,7 @@ public class PerfectNumbersTest {
         boolean expected = false;
 
         // Then
-        assertEquals(expected, perfectNumbers.isPerfectNumber(number));
+        assertEquals( false, perfectNumbers.isPerfectNumber(number));
 
 
         assertTrue(perfectNumbers.isPerfectNumber(8128));
