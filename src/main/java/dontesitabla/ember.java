@@ -14,6 +14,11 @@ public class ember {
         this.allokepesseg = allokepesseg;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
     public boolean isVegzettseg() {
         return vegzettseg;
     }
