@@ -24,6 +24,7 @@ class StoreTest {
 
    @Test
    void testNumberOfProductsByOneType(){
+
       List<ProductWithPiece> result = store.numberOfProductsByType();
 
       assertEquals (1, result.size());
@@ -31,4 +32,9 @@ class StoreTest {
       assertEquals(2, result.get(0).getCount());
 
    }
+
+
+
+
+
 }
